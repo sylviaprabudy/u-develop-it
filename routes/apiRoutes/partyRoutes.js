@@ -38,7 +38,7 @@ router.get('/party/:id', (req, res) => {
 });
 
 // Delete parties
-Router.delete('/party/:id', (req, res) => {
+router.delete('/party/:id', (req, res) => {
     const sql = `DELETE FROM parties WHERE id = ?`;
     const params = [req.params.id];
     db.run(sql, params, function (err, result) {
